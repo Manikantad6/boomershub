@@ -9,14 +9,14 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getPropList() {
-    return this.http.get('http://localhost:4300/fetchAll');
+    return this.http.get('http://3.6.37.62:4300//fetchAll');
   }
 
   searchProperties(stext) {
-    return this.http.get('http://localhost:4300/search/' + stext);
+    return this.http.get('http://3.6.37.62:4300//search/' + stext);
   }
   searchbyId(id) {
-    return this.http.get('http://localhost:4300/fetch/' + id);
+    return this.http.get('http://3.6.37.62:4300//fetch/' + id);
   }
 
 }
