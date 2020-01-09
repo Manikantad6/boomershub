@@ -16,7 +16,7 @@ export class DetailComponent implements OnInit {
   propertyDetails: any;
   images: any;
  // images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
-  constructor(private data: DataService, private router: Router, private sanitizer: DomSanitizer) { }
+  constructor(private data: DataService, private router: Router, public sanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.url = this.router.url.split('/')[2];

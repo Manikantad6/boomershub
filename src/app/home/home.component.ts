@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   // searchType = 'fae';
   searchText: string;
-  constructor(private data: DataService, private sanitizer: DomSanitizer) {
+  constructor(private data: DataService, public sanitizer: DomSanitizer) {
 
   }
 
