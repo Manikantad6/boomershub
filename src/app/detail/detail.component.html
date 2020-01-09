@@ -1,0 +1,31 @@
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" >
+    <div class="carousel-item active" *ngFor="let image of images">
+      <img class="d-block w-100" [src]='sanitizer.bypassSecurityTrustResourceUrl(image.slice(1,-1))' alt="First slide" height="500px" width="100%">
+    </div>
+
+  </div>
+  <a class="carousel-control-prev" href="javascript:void(0);" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="javascript:void(0);" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div  *ngIf="propertyDetails" >
+    <h3>{{propertyDetails.name}}</h3><br>
+    <div id="details">
+      <h6><b>Type:</b> {{propertyDetails.type}}</h6>
+      <h6><b>Address:</b> {{propertyDetails.address}}</h6>
+      <h6><b>City:</b> {{propertyDetails.city}}</h6>
+      <h6><b>State:</b> {{propertyDetails.state}}</h6>
+      <h6><b>ZIP:</b> {{propertyDetails.zip_code}}</h6>
+      <h6><b>Country:</b> {{propertyDetails.country}}</h6>
+      <h6><b>Phone:</b> {{propertyDetails.phone}}</h6>
+      <h6><b>Capacity:</b> {{propertyDetails.capacity}}</h6>
+    </div>
+
+</div>
