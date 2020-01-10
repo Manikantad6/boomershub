@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   onSearchChange(searchValue: string): void {
     console.log(searchValue);
     console.log(this.searchText)
-    this.data.searchProperties(searchValue).subscribe(data=>{
+    this.data.searchProperties(searchValue).subscribe(data => {
       this.result = data;
       this.properties = this.result.data;
     })

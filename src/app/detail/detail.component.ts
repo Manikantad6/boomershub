@@ -15,8 +15,9 @@ export class DetailComponent implements OnInit {
   resp: any;
   propertyDetails: any;
   images: any;
+  imageSrc: any;
  // images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
-  constructor(private data: DataService, private router: Router, public sanitizer: DomSanitizer) { }
+  constructor(private data: DataService, public router: Router, public sanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.url = this.router.url.split('/')[2];
@@ -26,9 +27,15 @@ export class DetailComponent implements OnInit {
             console.log(response);
             this.images = this.resp.data[0].images.slice(1,-1).split(',');
             this.propertyDetails = this.resp.data[0];
+            this.imageSrc = this.images[0].slice(1,-1);
             console.log(this.propertyDetails);
         })
     }
+  }
+
+  changeImage(source: any) {
+    console.log(source);
+    this.imageSrc = source;
   }
 
 }

@@ -10,10 +10,24 @@
 <body>
   <app-root></app-root>
 </body>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
 <script>
-$('.carousel-control').click(function(e){
-  e.preventDefault();
-});
+
+// $('.carousel-control').click(function(e){
+//   e.preventDefault();
+// });
+
+
+function changeImage(source) {
+    console.log('data clicked')
+    //  $('#myImg').src
+     $("#myImg").attr("src",source);
+    //alert(source);
+  }
+
+
 </script>
 </html>
